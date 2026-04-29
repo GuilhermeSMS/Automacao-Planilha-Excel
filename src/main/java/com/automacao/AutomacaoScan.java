@@ -16,14 +16,17 @@ public class AutomacaoScan {
 
     public static void main(String[] args) {
 
+        // --- 1. CONFIGURAÇÃO ---
         
         
         String CAMINHO_CHROMEDRIVER = "chromedriver.exe";
         String CAMINHO_PLANILHA = "automacao.xlsx";
         String URL_DO_SITE_FLOW = "https://www.amazonlogistics.com/sortcenter/m/containerization/flow?containerId=&stackingAreaId=";
 
+        // Configura o Selenium
         System.setProperty("webdriver.chrome.driver", CAMINHO_CHROMEDRIVER);
         WebDriver driver = new ChromeDriver();
+        // Cria uma "espera inteligente" de 10 segundos
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Scanner leitorTerminal = new Scanner(System.in);
         System.out.println("Continuando automação...");
@@ -37,6 +40,8 @@ public class AutomacaoScan {
             driver.get(URL_DO_SITE_FLOW);
             driver.manage().window().maximize();
 
+           
+            // [PAUSA PARA O LOGIN MANUAL COMPLETO]
             System.out.println("======================================================");
             System.out.println("--- SCRIPT PAUSADO ---");
             System.out.println("O navegador foi aberto.");
@@ -49,6 +54,7 @@ public class AutomacaoScan {
 
             while (true) {
             
+            // --- 3. LER O EXCEL ---
             LeitorExcel leitor = new LeitorExcel();
             
 
@@ -58,10 +64,11 @@ public class AutomacaoScan {
             
             for (String codigo : codigosParaEscanear) {
                 try {
-            
+            // 1. Espera o campo de scan (sd_input) estar pronto
             wait.until(ExpectedConditions.elementToBeClickable(By.id(ID_CAMPO_SCAN)));
             WebElement campoScan = driver.findElement(By.id(ID_CAMPO_SCAN));
             
+            // 2. Digita o código e aperta Enter
             System.out.println("Enviando código: " + codigo);
             campoScan.clear();
             campoScan.sendKeys(codigo);
@@ -100,15 +107,18 @@ public class AutomacaoScan {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+            // --- 5. FINALIZAR ---
             System.out.println("======================================================");
             System.out.println("SCAN FINALIZADO!");
             System.out.println("Total de pacotes na planilha: " + codigosParaEscanear.size());
             System.out.println("======================================================");
             try {
-        Thread.sleep(20000); 
+        Thread.sleep(20000); // Espera 10s para você ver o resultado
 }       catch (InterruptedException e) {
+    
         e.printStackTrace();
 }
+
         }
     }
 }
