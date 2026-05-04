@@ -4,7 +4,7 @@ Automação para leitura automatizada de uma planilha Excel utilizando Java e Se
 
 ## 🎬 Demonstração
 
-[Clique aqui para assistir o vídeo](https://drive.google.com/file/d/18QOofDoxJUJBoqJnwLVvPO75XWgDhbYx/view?usp=drive_link)
+[Clique aqui para assistir o vídeo](https://youtu.be/Amuhh0GmoGI)
 
 ## 🛠️ Tecnologias Utilizadas
 
