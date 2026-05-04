@@ -1,19 +1,20 @@
-# Meus Projetos Java 🚀
+# 📊 Automação de Planilha Excel
 
-Bem-vindo ao meu repositório de estudos e projetos em Java! Aqui organizo as automações e sistemas que venho desenvolvendo.
+Automação para leitura automatizada de uma planilha Excel utilizando Java e Selenium.
 
-## 📂 Projetos no Repositório
+## 🎬 Demonstração
 
-| Projeto | Descrição | Status     |
-| :--- | :--- |:-----------|
-| 📊 [Automação de Planilha Excel](./Automação%20de%20Planilha%20Excel) | Automação para leitura/escrita de dados em planilhas. | Finalizado |
-| 🔜 Próximo Projeto | Descrição do que pretendo fazer em breve. | Planejado  |
+[Clique aqui para assistir o vídeo](https://drive.google.com/file/d/18QOofDoxJUJBoqJnwLVvPO75XWgDhbYx/view?usp=drive_link)
 
 ## 🛠️ Tecnologias Utilizadas
+
 - **Linguagem:** Java
 - **IDE:** IntelliJ IDEA
-- **Gerenciador de Dependências:** Maven, Selenium
+- **Gerenciador de Dependências:** Maven
+- **Biblioteca:** Selenium
 - **Versionamento:** Git
 
----
-*Mantido por [Guilherme de Souza Muniz e Silva](https://github.com/GuilhermeSMS)*
+
+## 👨‍💻 Autor
+
+Guilherme de Souza Muniz e Silva
