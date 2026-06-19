@@ -2,10 +2,6 @@
 
 Automação para leitura automatizada de uma planilha Excel utilizando Java e Selenium.
 
-## 🎬 Demonstração
-
-[Clique aqui para assistir o vídeo](https://youtu.be/Amuhh0GmoGI)
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **Linguagem:** Java
